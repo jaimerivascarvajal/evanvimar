@@ -21,12 +21,6 @@ function App() {
         </div>
       )}
 
-      {/* Home Button (bottom right, visible unless on Home) */}
-      {activeSection !== 'home' && (
-        <div className="home-btn" onClick={() => setActiveSection('home')}>
-          🏠 Inicio
-        </div>
-      )}
 
       {/* Home Section (Landing) */}
       {activeSection === 'home' && (
