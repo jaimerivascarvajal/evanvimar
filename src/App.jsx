@@ -10,7 +10,6 @@ function App() {
           <div className="logo">EVANVIMAR</div>
           <nav className="nav">
             <ul>
-              <li><a href="#home">Inicio</a></li>
               <li><a href="#about">Nosotros</a></li>
               <li><a href="#projects">Proyectos</a></li>
               <li><a href="#contact">Contacto</a></li>
@@ -53,19 +52,25 @@ function App() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="projects">
+        <div className="container">
+          <h2 className="section-title">Nuestros Proyectos</h2>
+          <p style={{ textAlign: 'center' }}>Próximamente más información sobre nuestros proyectos.</p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer id="contact" className="footer">
         <div className="container footer-content">
           <div className="footer-logo">EVANVIMAR</div>
           <div className="footer-links">
             <h3>Contacto</h3>
-            <p>info@evanvimar.org</p>
-            <p>+123 456 7890</p>
+            <p>+505 8540 6355</p>
           </div>
           <div className="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+            <a href="https://www.instagram.com/evanvimar_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/100085644576439/" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
         <div className="footer-bottom">
