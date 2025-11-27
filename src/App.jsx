@@ -26,7 +26,7 @@ function App() {
         <section id="home" className="hero">
           <div className="hero-overlay"></div>
           <div className="container hero-content">
-            <div className="logo" style={{ marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>EVANVIMAR</div>
+            <div className="logo">EVANVIMAR</div>
             <h1>LIDERANDO CON EL EJEMPLO</h1>
             <p>Un proyecto social dedicado a crear impacto positivo con conciencia y compromiso.</p>
             <button onClick={() => setActiveSection('menu')} className="btn">Descubre Más</button>
