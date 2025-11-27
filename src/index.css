@@ -210,14 +210,17 @@ section {
   border-bottom: 10px solid var(--color-accent-yellow);
 }
 
-/* Menu Section - Innovative & Animated */
+/* Menu Section - Artistic & Professional */
 .menu-section {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  background-image: url('/assets/art-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,81 +229,80 @@ section {
   animation: menuFadeIn 0.6s ease-out;
 }
 
-/* Animated background particles */
+/* Artistic overlay to match hero */
 .menu-section::before {
   content: '';
   position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: particleFloat 20s linear infinite;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,
+      rgba(0, 91, 150, 0.92) 0%,
+      rgba(26, 26, 26, 0.95) 50%,
+      rgba(0, 91, 150, 0.92) 100%);
+  backdrop-filter: blur(3px);
 }
 
 @keyframes menuFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes particleFloat {
-  from {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  to {
-    transform: translate(-50px, -50px) rotate(360deg);
   }
 }
 
 .menu-items {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2.5rem;
   text-align: center;
   position: relative;
   z-index: 2;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .menu-btn {
   background: none;
   border: none;
   color: #fff;
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-family: 'Playfair Display', serif;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   position: relative;
-  padding: 1.5rem 3rem;
-  overflow: hidden;
+  padding: 1rem 2rem;
+  overflow: visible;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   opacity: 0;
   transform: translateY(30px);
   animation: slideInUp 0.6s ease-out forwards;
+  font-weight: 400;
 }
 
 /* Staggered animation delays */
 .menu-btn:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.15s;
 }
 
 .menu-btn:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.25s;
 }
 
 .menu-btn:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.35s;
 }
 
 .menu-btn:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.45s;
 }
 
 @keyframes slideInUp {
@@ -310,20 +312,24 @@ section {
   }
 }
 
-/* Animated underline effect */
+/* Elegant underline with color accent */
 .menu-btn::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 50%;
   width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  height: 2px;
+  background: linear-gradient(90deg,
+      var(--color-accent-yellow),
+      var(--color-accent-red),
+      var(--color-accent-yellow));
   transform: translateX(-50%);
   transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(244, 208, 63, 0.5);
 }
 
-/* Glowing background on hover */
+/* Subtle glow effect */
 .menu-btn::after {
   content: '';
   position: absolute;
@@ -331,7 +337,7 @@ section {
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.3), transparent);
+  background: radial-gradient(circle, rgba(244, 208, 63, 0.15), transparent);
   transform: translate(-50%, -50%);
   border-radius: 50%;
   transition: width 0.6s ease, height 0.6s ease;
@@ -339,11 +345,11 @@ section {
 }
 
 .menu-btn:hover {
-  color: #d4af37;
-  transform: scale(1.1) translateY(-5px);
-  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5),
-    0 0 40px rgba(212, 175, 55, 0.3);
-  letter-spacing: 12px;
+  color: var(--color-accent-yellow);
+  transform: translateY(-8px);
+  text-shadow: 0 0 30px rgba(244, 208, 63, 0.6),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+  letter-spacing: 10px;
 }
 
 .menu-btn:hover::before {
@@ -351,20 +357,25 @@ section {
 }
 
 .menu-btn:hover::after {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
 }
 
 /* Responsive menu */
 @media (max-width: 768px) {
+  .menu-items {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
   .menu-btn {
-    font-size: 2rem;
-    letter-spacing: 4px;
-    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    padding: 0.8rem 1.5rem;
   }
 
   .menu-btn:hover {
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
 }
 
