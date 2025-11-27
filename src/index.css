@@ -269,6 +269,52 @@ section {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Home Button - Bottom Right */
+.home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+  border: 2px solid var(--color-accent-yellow);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 91, 150, 0.4);
+}
+
+.home-btn:hover {
+  background: var(--color-accent-yellow);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(244, 208, 63, 0.6);
+}
+
 .menu-btn {
   background: none;
   border: none;
