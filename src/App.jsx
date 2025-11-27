@@ -126,7 +126,7 @@ function App() {
 
       {/* Redes Sociales Section */}
       {activeSection === 'contact' && (
-        <footer id="contact" className="footer" style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <footer id="contact" className="footer">
           <div className="container footer-content">
             <div className="footer-logo">EVANVIMAR</div>
             <div className="footer-links">

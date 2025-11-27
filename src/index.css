@@ -305,6 +305,79 @@ section {
   font-size: 1.1rem;
 }
 
+/* Footer / Redes Sociales */
+.footer {
+  background-color: #1a1a1a;
+  /* Match menu background */
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  /* More space between elements */
+  width: 100%;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d4af37;
+  /* Gold */
+  letter-spacing: 2px;
+}
+
+.footer-links h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-links a:hover {
+  background-color: #d4af37;
+  border-color: #d4af37;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  margin-top: auto;
+  /* Push to bottom if needed, or just margin */
+  padding-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
 @media (min-width: 768px) {
   .ceo-container {
     flex-direction: row;
