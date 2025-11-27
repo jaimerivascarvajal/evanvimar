@@ -206,6 +206,140 @@ section {
   /* Artistic border */
 }
 
+/* Menu Section */
+.menu-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #fff;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  /* Elegant font */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+  color: #d4af37;
+  /* Gold accent */
+}
+
+/* CEO Section */
+.ceo-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+.ceo-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.ceo-image-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 4px solid #d4af37;
+}
+
+.ceo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ceo-content {
+  text-align: left;
+}
+
+.ceo-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.ceo-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #d4af37;
+}
+
+.ceo-content p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .ceo-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .ceo-content {
+    flex: 1;
+  }
+
+  .ceo-content h2 {
+    text-align: left;
+  }
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .hero h1 {
   font-size: 4.5rem;
   color: var(--color-primary);
